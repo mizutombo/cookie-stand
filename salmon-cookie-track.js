@@ -11,11 +11,11 @@
       var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
       this.CookiePile += cookiesSoldHourly;
       console.log(cookiesSoldHourly);
-      document.getElementById('cookie-stand1').innerHTML = this.StoreID;
+      document.getElementById('cookie-stand1').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
       var salesList = document.getElementById('cookie-stand2');
-      var hourlySales = '<li>'+time[i]+cookiesSoldHourly+'</li>';
+      var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
       salesList.innerHTML += hourlySales;
-      document.getElementById('cookie-stand3').innerHTML = '<li>'+'Total: '+this.CookiePile+'</li>';
+      document.getElementById('cookie-stand3').innerHTML = '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
   }
   }
   };
@@ -31,11 +31,11 @@
     var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
     this.CookiePile += cookiesSoldHourly;
     console.log(cookiesSoldHourly);
-    document.getElementById('cookie-stand4').innerHTML = this.StoreID;
+    document.getElementById('cookie-stand4').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
     var salesList = document.getElementById('cookie-stand5');
-    var hourlySales = '<li>'+time[i]+cookiesSoldHourly+'</li>';
+    var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
     salesList.innerHTML += hourlySales;
-    document.getElementById('cookie-stand6').innerHTML = '<li>'+'Total: '+this.CookiePile+'</li>';
+    document.getElementById('cookie-stand6').innerHTML = '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
   }
   }
   };
@@ -51,11 +51,11 @@
     var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
     this.CookiePile += cookiesSoldHourly;
     console.log(cookiesSoldHourly);
-    document.getElementById('cookie-stand7').innerHTML = this.StoreID;
+    document.getElementById('cookie-stand7').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
     var salesList = document.getElementById('cookie-stand8');
-    var hourlySales = '<li>'+time[i]+cookiesSoldHourly+'</li>';
+    var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
     salesList.innerHTML += hourlySales;
-    document.getElementById('cookie-stand9').innerHTML = '<li>'+'Total: '+this.CookiePile+'</li>';
+    document.getElementById('cookie-stand9').innerHTML = '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
   }
   }
   };
@@ -71,11 +71,11 @@
     var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
     this.CookiePile += cookiesSoldHourly;
     console.log(cookiesSoldHourly);
-    document.getElementById('cookie-stand10').innerHTML = this.StoreID;
+    document.getElementById('cookie-stand10').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
     var salesList = document.getElementById('cookie-stand11');
-    var hourlySales = '<li>'+time[i]+cookiesSoldHourly+'</li>';
+    var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
     salesList.innerHTML += hourlySales;
-    document.getElementById('cookie-stand12').innerHTML = '<li>'+'Total: '+this.CookiePile+'</li>';
+    document.getElementById('cookie-stand12').innerHTML = '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
   }
   }
   };
@@ -91,11 +91,11 @@
     var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
     this.CookiePile += cookiesSoldHourly;
     console.log(cookiesSoldHourly);
-    document.getElementById('cookie-stand13').innerHTML = this.StoreID;
+    document.getElementById('cookie-stand13').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
     var salesList = document.getElementById('cookie-stand14');
-    var hourlySales = '<li>'+time[i]+cookiesSoldHourly+'</li>';
+    var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
     salesList.innerHTML += hourlySales;
-    document.getElementById('cookie-stand15').innerHTML = '<li>'+'Total: '+this.CookiePile+'</li>';
+    document.getElementById('cookie-stand15').innerHTML = '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
   }
   }
   };
