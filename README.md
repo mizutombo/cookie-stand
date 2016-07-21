@@ -6,3 +6,5 @@
 * 7/16/2016 // revised JS code to enable correct functionality of daily cookies summation per store ... created new file styleguide.html, and renamed index.css to styleguide.css ... ACP<br/>
 * 7/16/2016 // created & switched to branch 'class07'<br/>
 * 7/18/2016 // developed CSS coding for webpage style guide ... used HTML file 'styleguide.html' to create coding for 'style guide' ... updated README ... ACP<br/>
+* 7/20/2016 // coded JS for 'salmon-cookie-objconst.js' using object constructors in place of object literals ... current webpage output onto 'index-objconst.html' as list format to validate functionality of object constructor code ... updated README ... ACP to new working branch 'class08'<br/>
+*
