@@ -7,17 +7,27 @@
     CookiePile:          0,
     CookiesSoldHourly: function() {
       var time = ['10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: '];
+    // use DOM manipulation to add section with store name
+    var section = document.getElementById('cookie-stand1');
+    console.log(section);
+    var storeName = document.createElement('p');
+    console.log(storeName);
+    storeName.innerText = this.StoreID;
+    section.appendChild(storeName);
+    // run 'for' loop to cycle through times of the day for this store
       for (var i = 0; i < time.length; i++) {
         var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
         console.log(cookiesSoldHourly);
         //tally up total cookies for store
         this.CookiePile += cookiesSoldHourly;
-        document.getElementById('cookie-stand1').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
-        var salesList = document.getElementById('cookie-stand2');
-        var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
-        salesList.innerHTML += hourlySales;
+        // use DOM manipulation to add list item & append onto paragraph 'storeName'
+        var cookieTimeList = document.createElement('li');
+        cookieTimeList.innerText = time[i] + cookiesSoldHourly;
+        storeName.appendChild(cookieTimeList);
       }
-    document.getElementById('cookie-stand2').innerHTML += '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
+        var totalDailyCookies = document.createElement('li');
+        totalDailyCookies.innerText = 'Total: '+this.CookiePile;
+        storeName.appendChild(totalDailyCookies);
     }
   };
   var storeNo2 = {
@@ -28,17 +38,26 @@
     CookiePile:          0,
     CookiesSoldHourly: function() {
       var time = ['10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: '];
+    var section = document.getElementById('cookie-stand1');
+    console.log(section);
+    var storeName = document.createElement('p');
+    console.log(storeName);
+    storeName.innerText = this.StoreID;
+    section.appendChild(storeName);
+    // run 'for' loop to cycle through times of the day for this store
       for (var i = 0; i < time.length; i++) {
         var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
         console.log(cookiesSoldHourly);
         //tally up total cookies for store
         this.CookiePile += cookiesSoldHourly;
-        document.getElementById('cookie-stand3').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
-        var salesList = document.getElementById('cookie-stand4');
-        var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
-        salesList.innerHTML += hourlySales;
+        // use DOM manipulation to add list item & append onto paragraph 'storeName'
+        var cookieTimeList = document.createElement('li');
+        cookieTimeList.innerText = time[i] + cookiesSoldHourly;
+        storeName.appendChild(cookieTimeList);
       }
-    document.getElementById('cookie-stand4').innerHTML += '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
+        var totalDailyCookies = document.createElement('li');
+        totalDailyCookies.innerText = 'Total: '+this.CookiePile;
+        storeName.appendChild(totalDailyCookies);
     }
   };
   var storeNo3 = {
@@ -49,17 +68,26 @@
     CookiePile:          0,
     CookiesSoldHourly: function() {
       var time = ['10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: '];
+    var section = document.getElementById('cookie-stand1');
+    console.log(section);
+    var storeName = document.createElement('p');
+    console.log(storeName);
+    storeName.innerText = this.StoreID;
+    section.appendChild(storeName);
+    // run 'for' loop to cycle through times of the day for this store
       for (var i = 0; i < time.length; i++) {
         var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
         console.log(cookiesSoldHourly);
         //tally up total cookies for store
         this.CookiePile += cookiesSoldHourly;
-        document.getElementById('cookie-stand5').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
-        var salesList = document.getElementById('cookie-stand6');
-        var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
-        salesList.innerHTML += hourlySales;
+        // use DOM manipulation to add list item & append onto paragraph 'storeName'
+        var cookieTimeList = document.createElement('li');
+        cookieTimeList.innerText = time[i] + cookiesSoldHourly;
+        storeName.appendChild(cookieTimeList);
       }
-    document.getElementById('cookie-stand6').innerHTML += '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
+        var totalDailyCookies = document.createElement('li');
+        totalDailyCookies.innerText = 'Total: '+this.CookiePile;
+        storeName.appendChild(totalDailyCookies);
     }
   };
   var storeNo4 = {
@@ -70,17 +98,26 @@
     CookiePile:          0,
     CookiesSoldHourly: function() {
       var time = ['10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: '];
+    var section = document.getElementById('cookie-stand1');
+    console.log(section);
+    var storeName = document.createElement('p');
+    console.log(storeName);
+    storeName.innerText = this.StoreID;
+    section.appendChild(storeName);
+    // run 'for' loop to cycle through times of the day for this store
       for (var i = 0; i < time.length; i++) {
         var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
         console.log(cookiesSoldHourly);
         //tally up total cookies for store
         this.CookiePile += cookiesSoldHourly;
-        document.getElementById('cookie-stand7').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
-        var salesList = document.getElementById('cookie-stand8');
-        var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
-        salesList.innerHTML += hourlySales;
+        // use DOM manipulation to add list item & append onto paragraph 'storeName'
+        var cookieTimeList = document.createElement('li');
+        cookieTimeList.innerText = time[i] + cookiesSoldHourly;
+        storeName.appendChild(cookieTimeList);
       }
-    document.getElementById('cookie-stand8').innerHTML += '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
+        var totalDailyCookies = document.createElement('li');
+        totalDailyCookies.innerText = 'Total: '+this.CookiePile;
+        storeName.appendChild(totalDailyCookies);
     }
   };
   var storeNo5 = {
@@ -91,19 +128,29 @@
     CookiePile:          0,
     CookiesSoldHourly: function() {
       var time = ['10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: '];
-      for (var i = 0; i < time.length; i++) {
-        var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
-        console.log(cookiesSoldHourly);
-        //tally up total cookies for store
-        this.CookiePile += cookiesSoldHourly;
-        document.getElementById('cookie-stand9').innerHTML = '<span class="hilite">'+this.StoreID+'</span>';
-        var salesList = document.getElementById('cookie-stand10');
-        var hourlySales = '<li><span class="text">'+time[i]+'</span><span class="data">'+cookiesSoldHourly+'</span></li>';
-        salesList.innerHTML += hourlySales;
+      var section = document.getElementById('cookie-stand1');
+      console.log(section);
+      var storeName = document.createElement('p');
+      console.log(storeName);
+      storeName.innerText = this.StoreID;
+      section.appendChild(storeName);
+      // run 'for' loop to cycle through times of the day for this store
+        for (var i = 0; i < time.length; i++) {
+          var cookiesSoldHourly = Math.floor(((Math.random() * (this.MaxCust - this.MinCust + 1)) + this.MinCust) * this.AvgCookiePerSale);
+          console.log(cookiesSoldHourly);
+          //tally up total cookies for store
+          this.CookiePile += cookiesSoldHourly;
+          // use DOM manipulation to add list item & append onto paragraph 'storeName'
+          var cookieTimeList = document.createElement('li');
+          cookieTimeList.innerText = time[i] + cookiesSoldHourly;
+          storeName.appendChild(cookieTimeList);
+        }
+          var totalDailyCookies = document.createElement('li');
+          totalDailyCookies.innerText = 'Total: '+this.CookiePile;
+          storeName.appendChild(totalDailyCookies);
       }
-    document.getElementById('cookie-stand10').innerHTML += '<li><span class="text">'+'Total: '+'</span><span class="data">'+this.CookiePile+'</span></li>';
-    }
-  };
+    };
+  // call function
   var store = [storeNo1, storeNo2, storeNo3, storeNo4, storeNo5];
   for (var i = 0; i < store.length; i++) {
     var hourlyCookies = store[i];

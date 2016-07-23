@@ -9,8 +9,6 @@
     this.cookiesSoldHourly = function() {
       return Math.floor(((Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust) * this.avgCookiePerSale);
       console.log(this.cookiesSoldHourly);
-          var storeHourlySales = this.cookiesSoldHourly();
-          this.cookiePile += storeHourlySales;
     };
   }
   var cookieStores = [
@@ -20,23 +18,24 @@
     new Store('Sellwood', ['10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: '], 20, 48, 3.3),
     new Store('Pearl District', ['10am: ','11am: ','12pm: ','1pm: ','2pm: ','3pm: ','4pm: ','5pm: '], 3, 24, 2.6),
   ];
+  var table = document.getElementById('cookie-wookie');
   for (var index = 0; index < cookieStores.length; index++) {
+    // establish variable to enable run through each Store
     var currentStore = cookieStores[index];
-    // initialize var cookiePile
+    // initialize var cookiePile to 0
     var cookiePile = 0;
-    // create new row to append to table
     var cookieStoreRow = document.createElement('tr');
-    // create row data cell for store name
     var storeNameCell = document.createElement('td');
     storeNameCell.innerText = currentStore.storeName;
     cookieStoreRow.appendChild(storeNameCell);
     for (var i = 0; i < currentStore.storeTime.length; i++) {
       // create row data cells for cookies sold each hour throughout the day ... run function for cookies sold hourly, using random number engine
       var storeHourlyCookiesCell = document.createElement('td');
-      storeHourlyCookiesCell.innerText = currentStore.cookiesSoldHourly();
+      // set up variable cookiesSold to save cookiesSoldHourly as a number
+      var cookiesSold = currentStore.cookiesSoldHourly();
+      storeHourlyCookiesCell.innerText = cookiesSold;
       // keep running tally of hourly cookie sales for store
-      currentStore.cookiePile += parseInt(storeHourlyCookiesCell.innerText);
-      console.log(storeHourlyCookiesCell.innerText);
+      currentStore.cookiePile += cookiesSold;
       console.log(currentStore.cookiePile);
       cookieStoreRow.appendChild(storeHourlyCookiesCell);
     }
@@ -46,9 +45,10 @@
     console.log(storeTotalSalesCell.innerText);
     cookieStoreRow.appendChild(storeTotalSalesCell);
     // append new row onto table
-    var table = document.getElementById('cookie-wookie');
     table.appendChild(cookieStoreRow);
   }
+
+// *** Everything below this line is old, superceded code. ***
 
     // var storeHourlyCookiesCell10am = document.createElement('td');
     // storeHourlyCookiesCell10am.innerText = currentStore.cookiesSoldHourly();
