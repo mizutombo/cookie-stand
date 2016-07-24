@@ -1,6 +1,10 @@
 
-header, table, section, footer, aside, nav, article, figure, figcaption {
+header, table, section, footer, aside, article, figure, figcaption {
   display: block
+}
+header {
+  padding-top: 20px;
+  padding-left: 20px;
 }
 body {
   background-color: #ECDBDE;
@@ -9,8 +13,25 @@ body {
   font-size: 22px;
   color: black;
 }
+nav {
+  display: inline-block;
+  width: 500px;
+  padding-left: 40px;
+}
+nav p {
+  background-color: #CEF7C8;
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  border: 0.75px solid blue;
+  margin: 0 5px;
+}
 table {
   border: 1px solid black;
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 auto;
 }
 th {
   font-family: Cookie;
@@ -18,13 +39,41 @@ th {
   font-size: 26px;
   font-weight:normal;
   color: #AD0000;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.08em;
+}
+tr {
+  height: 35px;
 }
 td {
   font-family: 'Trebuchet MS', Verdana, sans-serif;
   font-style: normal;
   font-size: 24px;
   color: #0204A6;
+  text-align: center;
+  border: 1px dotted black;
+}
+#table-title {
+  font-family: Cookie;
+  font-style: normal;
+  font-size: 26px;
+  font-weight: bold;
+  color: #AD0000;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+#first-row th {
+  border: 1px dotted black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#cookie-wookie tr td:first-of-type {
+  text-align: left;
+  width: 218px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+#cookie-wookie tr td: {
+  padding-left: 10px;
 }
 h1 {
   font-style: oblique;
@@ -47,7 +96,7 @@ p {
   font-size: 26px;
   font-weight:normal;
   color: #AD0000;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.09em;
 }
 .data {
   font-family: 'Trebuchet MS', Verdana, sans-serif;
@@ -80,11 +129,6 @@ header {
 footer {
 }
 article {
-}
-nav p {
-  background-color: #CEF7C8;
-  display: inline-block;
-
 }
 aside {
   background-color: #CEF7C8;
