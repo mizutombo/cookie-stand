@@ -4,18 +4,19 @@
   <link rel="stylesheet" type="text/css" href="styleguide.css">
 </head>
 <body>
-
   <header>
     <h1>Pat's PDX Salmon Cookies</h1>
   </header>
+  <br/>
   <img src='fishies.jpg'/>
   <br/>
   <nav>
-    <p>About Us</p>
-    <p>Products</p>
-    <p>Contact Us</p>
+    <ul>
+    <p><a href>About Us</a></p>
+    <p><a href>Products</a></p>
+    <p><a href>Contact Us</a></p>
+    </ul>
   </nav>
-  <br/>
   <br/>
   <p id='table-title'>Cookie Sales Production Model:  Stores vs Cookies Sold</p>
   <table id='cookie-wookie'>
@@ -32,7 +33,70 @@
       <th>Total Sales</th>
     </tr>
   </table>
+  <br/>
+  <section>
+  <form>
+    <p id='cookieHQ'>Pat's Cookie Store Command Center</p>
 
+    <label for='newStoreName'>Store Name:</label>
+    <input id='newStoreName' name='newStoreName'>
+    <label for='newMinCust'>Minimum Customers:</label>
+    <input id='newMinCust' name='newMinCust'>
+    <label for='newMaxCust'>Maximum Customers:</label>
+    <input id='newMaxCust' name='newMaxCust'>
+    <label for='newAvgCookiePerSale'>Avg Qty Cookies Per Sale:</label>
+    <input id='newAvgCookiePerSale' name='newAvgCookiePerSale'>
+    <br/>
+    <input id='input' type='button' value='Add Store Info' onclick='pullInfo(this.form)'>
+  </form>
+
+  <script type='text/javascript'>
+  function pullInfo(formToUse) {
+  // establish variables for form inputted new store parameters
+  var newStoreName = formToUse.newStoreName.value;
+  var newMinCust = formToUse.newMinCust.value;
+  var newMaxCust = formToUse.newMaxCust.value;
+  var newAvgCookiePerSale = formToUse.newAvgCookiePerSale.value;
+  // random numbers engine function for generating hourly cookie sales
+  newCookiesSoldHourly = function() {
+    return Math.floor(((Math.random() * (newMaxCust - newMinCust + 1)) + newMinCust) * newAvgCookiePerSale);
+  };
+  var table = document.getElementById('cookie-wookie');
+
+    // initialize var cookiePile to 0
+    var cookiePile = 0;
+    // create new row in DOM for new store data
+    var addCookieStoreRow = document.createElement('tr');
+    // create data cell for form inputted store name
+    var addStoreNameCell = document.createElement('td');
+    // inject form inputted store name into store name data cell
+    addStoreNameCell.innerText = newStoreName;
+    // add store name data cell with new store name into new store data row
+    addCookieStoreRow.appendChild(addStoreNameCell);
+    // run loop for 8 iterations to generate hourly cookie sales
+    for (var i = 0; i < 8; i++) {
+      // create hourly sales cell for cookies, via random engine
+      var addHourlyCookiesCell = document.createElement('td');
+      // run form input parameters through random engine for hourly cookie sales
+      var cookiesSold = newCookiesSoldHourly();
+      // add random engine generated cookie sales into hourly sales cell
+      addHourlyCookiesCell.innerText = cookiesSold;
+      // keep running tally of hourly cookie sales for store
+      cookiePile += cookiesSold;
+      // add hourly cookie sales cell into new store data row
+      addCookieStoreRow.appendChild(addHourlyCookiesCell);
+    }
+    // create total cookie sales data cell
+    var addTotalSalesCell = document.createElement('td');
+    // add total daily cookie sales into total cookie sales data cell
+    addTotalSalesCell.innerText = cookiePile;
+    // add total cookie sales data cell into new store data row
+    addCookieStoreRow.appendChild(addTotalSalesCell);
+    // append new store data row onto table in DOM
+    table.appendChild(addCookieStoreRow);
+  };
+  </script>
+  </section>
   <br/>
   <p id='cookie-stand1'> </p>
 

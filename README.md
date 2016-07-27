@@ -12,4 +12,6 @@
 * 7/22/2016 // further refined JS code with nested 'for' loops to comply with DRY principles ... debugged coded to eliminate NaN error in total daily cookie tally ... ACP to 'class08' <br/>
 * 7/23/2016 // additional refinements to JS code in assignment class08 to improve efficiency ... retro-fitted assignment class07 to implement DOM manipulation JS into 'salmon-cookie-track.js' file and HTML5 semantic markup within 'index.html' file ... ACP to 'class08' <br/>
 * 7/24/2016 // corrected entry dates of previous days' README inputs ... additional refinements to CSS code to improve appearance of table ... improved CSS code for nav to improve appearance ... inserted first img file 'fishies.jpg' into HTML file ... ACP to 'class08' <br/>
-* 7/24/2016 // 
+* 7/24/2016 // created new branch 'class09' ... worked on HTML and JS code for class09 assignment ... work in progress. <br/>
+* 7/26/2016 // debugged and validated HTML and JS code for class09 assignment ... assignment completed ... updated README ... ACP to 'class09'. <br/>
+*

@@ -2,9 +2,15 @@
 header, table, section, footer, aside, article, figure, figcaption {
   display: block
 }
-header {
-  padding-top: 20px;
-  padding-left: 20px;
+header h1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  border: 2.5px solid red
 }
 body {
   background-color: #ECDBDE;
@@ -14,20 +20,26 @@ body {
   color: black;
 }
 nav {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+  text-align: justify;;
   width: 500px;
-  padding-left: 40px;
+  padding: 0 auto;
 }
-nav p {
+nav ul p {
   background-color: #CEF7C8;
   display: inline-block;
   width: 130px;
   text-align: center;
-  border: 0.75px solid blue;
+  border: 2px solid blue;
   margin: 0 5px;
 }
+nav a:hover {
+  color: red;
+  font-weight: bold;
+}
 table {
-  border: 1px solid black;
+  border: 2px solid blue;
   width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -37,7 +49,7 @@ th {
   font-family: Cookie;
   font-style: normal;
   font-size: 26px;
-  font-weight:normal;
+  font-weight: normal;
   color: #AD0000;
   letter-spacing: 0.08em;
 }
@@ -74,6 +86,21 @@ td {
 }
 #cookie-wookie tr td: {
   padding-left: 10px;
+}
+form {
+  display: block;
+  width: 475px;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+form label {
+  display: inline-block;
+  margin-left: 40px;
+  text-align: justify;;
+}
+#cookieHQ {
+  font-weight: bold;
+  text-align: center;
 }
 h1 {
   font-style: oblique;
